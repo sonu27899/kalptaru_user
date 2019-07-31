@@ -1,0 +1,45 @@
+tr,td{
+    border:1px solid gray;
+  }
+  table{
+    border:1px solid gray; width:100%;
+  }
+  example-h2 {
+    margin: 10px;
+  }
+  
+  .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .example-margin {
+    margin: 0 10px;
+  }
+  .card-background-page {
+
+    ion-card {
+      position: relative;
+      text-align: center;
+    }
+  
+    .card-title {
+      position: absolute;
+      top: 36%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+    }
+  
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #fff;
+    }
+  
+  }

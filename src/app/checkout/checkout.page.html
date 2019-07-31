@@ -1,0 +1,71 @@
+<ion-header>
+		<ion-toolbar>
+			<ion-buttons slot="start">
+				<ion-menu-button></ion-menu-button>
+			</ion-buttons>
+			<ion-title>
+				Cart
+			</ion-title>
+			
+		</ion-toolbar>
+	</ion-header>
+
+<ion-content padding>
+
+<div class="shopping-cart">
+
+  <div class="column-labels">
+    <label class="product-image">Image</label>
+    <label class="product-details">Product</label>
+    <label class="product-price">Price</label>
+    <label class="product-quantity">Quantity</label>
+    <label class="product-removal">Remove</label>
+    <label class="product-line-price">Total</label>
+  </div>
+
+  <div class="product" *ngFor="let item of productDescriptionarr,let i = index">
+    <div class="product-image">
+      <!-- <img src="{{'http://localhost:3000/images/'+ item.product_image}}" alt="{{item.product_name}}"> -->
+      <img src="{{'http://godaddykalpataru.herokuapp.com/images/'+ item.product_image}}" alt="{{item.product_name}}">
+    </div>
+    <div class="product-details">
+    <a (click)="productPageRouting(item.product_id)">  <div class="product-title">{{item.product_name}}</div></a>
+      <p class="product-description">{{item.product_material}}</p>
+    </div>
+    <div class="product-price">₹{{item.product_price}}</div>
+    <div class="product-quantity">
+      <input type="number" value="{{cartarr[i].qty}}" [(ngModel)]="changeqty" min="1" (change)="qtychange(i)">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product" (click)="deletecart(item.product_id,i)">
+        Remove
+      </button>
+    </div>
+    <div class="product-line-price">₹{{itemTotal[i]}}</div>
+  </div>
+
+
+
+  <div class="totals">
+    <div class="totals-item">
+      <label>Subtotal</label>
+      <div class="totals-value" id="cart-subtotal">{{subtotal}}</div>
+    </div>
+    <div class="totals-item">
+      <label>GST (18%)</label>
+      <div class="totals-value" id="cart-tax">{{gst}}</div>
+    </div>
+    <div class="totals-item totals-item-total">
+      <label>Grand Total</label>
+      <div class="totals-value" id="cart-total">{{grandtotal}}</div>
+    </div>
+  </div>
+      
+      <button class="checkoutButton" (click)="continue()">Continue</button>
+
+</div>
+
+
+
+
+</ion-content>

@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+<ion-content padding>
+    <!-- <div class="body"></div>
+      <div class="grad"></div>
+      <div class="header">
+        <div>Kalptaru<span> Furniture</span></div>
+      </div>
+      <br>
+      <div class="login">
+  
+          <label
+          style=" width: 450px;
+              height: 30px;
+              background: transparent;
+              border: 0px solid rgba(255,255,255,0.6);
+              border-radius: 2px;
+              margin-left: 30%;
+              color: #fff;
+              font-family: 'Exo', sans-serif;
+              font-size: 42px;
+              font-weight: 400;
+              padding: 5px;" (click)="presentToast()">Log In</label><br><br><br>
+  
+  
+          <input type="text" placeholder="user Email Id" name="user" [(ngModel)]="user_email" required  ><br>
+  
+  
+          <input type="password" placeholder="password" name="password" [(ngModel)]="user_password" required><br>
+  
+  
+          <input type="button" value="Login" (click)="login()"><br><br><br>
+  
+  
+          <input type="button" value="Forgot password" >
+  
+  
+          <input type="button" value="Don't have an account? SignUp " (click)="signup_navigate()" >
+        </div> -->
+        <div class="agile-login">
+          <div class="wrapper">
+            <h2>Login</h2>
+            <div class="w3ls-form">
+              <form action="/" method="post">
+                <label>Email Id</label>
+                <!-- <input type="text" name="name" placeholder="Username" required/> -->
+                <input type="text" placeholder="Email Id" name="user" [(ngModel)]="user_email" required/>
+                <label>Password</label>
+                <!-- <input type="text" name="password" placeholder="Password" required /> -->
+                <input type="password" placeholder="Password" name="password" [(ngModel)]="user_password" required/>
+                <a (click)="forgotpassword()" class="pass">Forgot Password ?</a>
+                <input type="submit" (click)="login()" value="LogIn" />
+                <a (click)="signup_navigate()" class="pass">Sign up?</a>
+              </form>
+            </div>
+            
+            
+          </div>
+          <br>
+        </div>
+  
+</ion-content>
+<!--<ion-footer style="background: transparent; background-color: transparent;padding-left: 30px;">
+    <ion-row>
+      <ion-col><ion-icon name="arrow-dropleft-circle"></ion-icon></ion-col>
+      <ion-col><ion-icon name="arrow-dropright-circle"></ion-icon></ion-col>
+      <ion-col><ion-icon name="apps"></ion-icon></ion-col>
+      <ion-col><ion-icon name="person"></ion-icon></ion-col>
+    </ion-row>
+      
+  </ion-footer> -->
