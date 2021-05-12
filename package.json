@@ -35,7 +35,7 @@
     "jspdf": "^1.5.3",
     "ngx-qrcode2": "0.0.9",
     "rxjs": "~6.3.3",
-    "swiper": "^4.5.0",
+    "swiper": "^6.5.1",
     "zone.js": "~0.8.29"
   },
   "devDependencies": {
